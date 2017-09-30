@@ -17,7 +17,7 @@ void converter ( double value, char scale )
 			printf ( "%.2f K \n", kel );
 		}
 	}
-	else if ( scale == 'f' || scale == 'F' )
+	if ( scale == 'f' || scale == 'F' )
 	{
 		if ( value <= -459.67 )
 		{
@@ -32,7 +32,7 @@ void converter ( double value, char scale )
 			printf ( "%.2f K \n", kel );
 		}
 	}
-	else if ( scale == 'k' || scale == 'K' )
+	if ( scale == 'k' || scale == 'K' )
 	{
 		if ( value <= 0 )
 		{
@@ -47,7 +47,7 @@ void converter ( double value, char scale )
 			printf ( "%.2f F \n", far );
 		}
 	}
-	else
+	if ( ! ( scale == 'c' || scale == 'C' || scale == 'f' || scale == 'F' || scale == 'k' || scale == 'K' ) )
 	{
 		printf ( "<<ERROR. Unknown temperature scale. Type C, K or F.>>" );
 	}
