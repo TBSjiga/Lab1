@@ -55,7 +55,7 @@ void converter ( double value, char scale )
 
 int main( int argc, char *argv[] )
 {
-	if ( argc == 2 )
+	if ( argc == 2 ) /*If only a number is given*/
 	{
 		double value = atof ( argv[1] );
 		converter ( value,'C' );
@@ -64,7 +64,7 @@ int main( int argc, char *argv[] )
 		printf ( "\n" );
 		converter ( value,'K' );
 	}
-    else if( argc == 3 ) 
+    else if( argc == 3 ) /*If a number is specified with a unit of measure*/
 	{
 		double value = atof ( argv[1] );
 		converter ( value,*argv[2] );
